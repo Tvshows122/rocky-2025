@@ -28,8 +28,8 @@ SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/e36fe033ca4781fa807
 SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://telegra.ph/file/734170f40b8169830d821.jpg'))
 CODE = (environ.get('CODE', 'https://telegra.ph/file/72f425007b22d28bd935e.jpg'))
 #stream link shortner
-STREAM_SITE = (environ.get('STREAM_SITE', 'Adrinolinks.in'))
-STREAM_API = (environ.get('STREAM_API', 'cf7d1aad2e284b499245abeaead6f2f38a2b2f74'))
+STREAM_SITE = (environ.get('STREAM_SITE', 'Modijiurl.com'))
+STREAM_API = (environ.get('STREAM_API', '7d468cdfef3e3eb7456f75429896349b6f2f1161'))
 STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/infinitybm'))
 
 # Admins, Channels & Users
@@ -61,8 +61,8 @@ VERIFY = bool(environ.get('VERIFY', False)) # Verification On ( True ) / Off ( F
 HOWTOVERIFY = environ.get('HOWTOVERIFY', 'https://t.me/infinitybm') # How to open tutorial link for verification
 
 # Others
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'Adrinolinks.in')
-SHORTLINK_API = environ.get('SHORTLINK_API', 'cf7d1aad2e284b499245abeaead6f2f38a2b2f74')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'Modijiurl.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', '7d468cdfef3e3eb7456f75429896349b6f2f1161')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))  # else--> True
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "5")
