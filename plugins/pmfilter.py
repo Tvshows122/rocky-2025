@@ -2075,14 +2075,26 @@ async def auto_filter(client, msg, spoll=False):
             search = search.replace(":","")
             files, offset, total_results = await get_search_results(message.chat.id ,search, offset=0, filter=True)
             settings = await get_settings(message.chat.id)
-            if not files:
+         """   if not files:
                 await m.delete()
                 if settings["spell_check"]:
                     return await advantage_spell_chok(client, msg)
                 else:
                     # if NO_RESULTS_MSG:
                     #     await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, search)))
-                    return
+                    return"""
+        if not files:
+    await m.delete()
+
+    # Debugging logs
+    print(f"Spell check setting: {settings.get('spell_check', 'Not Found')}")
+    
+    if settings.get("spell_check", False):  # Use .get() to avoid KeyError
+        print("Triggering spell check function")
+        return await advantage_spell_chok(client, msg)
+    else:
+        print("Spell check is disabled")
+        return
         else:
             return
     else:
