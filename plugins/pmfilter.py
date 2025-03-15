@@ -2084,17 +2084,15 @@ async def auto_filter(client, msg, spoll=False):
                     #     await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, search)))
                     return"""
         if not files:
-    await m.delete()
-
-    # Debugging logs
-    print(f"Spell check setting: {settings.get('spell_check', 'Not Found')}")
-    
-    if settings.get("spell_check", False):  # Use .get() to avoid KeyError
-        print("Triggering spell check function")
-        return await advantage_spell_chok(client, msg)
-    else:
-        print("Spell check is disabled")
-        return
+            await m.delete()
+            print(f"Spell check setting: {settings.get('spell_check', 'Not Found')}")
+            if settings.get("spell_check", False):
+                 print("Triggering spell check function")
+                 return await advantage_spell_chok(client, msg)    
+            else:
+                 print("Spell check is disabled")
+                return
+       
         else:
             return
     else:
